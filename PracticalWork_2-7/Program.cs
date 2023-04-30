@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalWork_2_7_1
+namespace PracticalWork_2_7
 {
     class Program
     {
@@ -22,15 +22,23 @@ namespace PracticalWork_2_7_1
             float maths = 78.5f;      //математика
             float physics = 82.4f;    //физика
 
+            float sum;          //сумма баллов
+            float averageSum;   //средняя сумма баллов
+
+            sum = programing + maths + physics;
+            averageSum = sum / 3f;
+
             Console.WriteLine(
-                $"{familyName, 20}\tfamilyName" +
-                $"\n{name, 20}\tname" +
+                $"{familyName,20}\tfamilyName" +
+                $"\n{name,20}\tname" +
                 $"\n{surname,20}\tsurname" +
                 $"\n{age,20}\tage" +
                 $"\n{email,20}\temail" +
-                $"\n{programing,20}\tprograming" +
-                $"\n{maths,20}\tmaths" +
-                $"\n{physics,20}\tphysics"
+                $"\n{programing,20}\tпрограммирование" +
+                $"\n{maths,20}\tматематика" +
+                $"\n{physics,20}\tфизика" +
+                $"\n\n{sum,20:#.#}\tобщая сумма баллов" +
+                $"\n{averageSum,20:#.#}\tсредний балл"
                 );
 
             Console.ReadKey();
